@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Latest Update</title>
+        <?php
+        $receivedTitle = urldecode($_GET['title']);
+        $receivedDescription = urldecode($_GET['description']);
+        $receivedDate = urldecode($_GET['date']);
+        $receivedImg = urldecode($_GET['img']);
+        $receivedCat = urldecode($_GET['cat']);
+        // Now you can use $receivedTitle and $receivedDescription in your code
+        ?>
+    <title><?php echo $receivedTitle; ?></title>
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="/Eshaan/p1/css/all.css">
 
 
     <!-- --------- Owl-Carousel ------------------->
-    <link rel="stylesheet" href="./css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/Eshaan/p1/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/Eshaan/p1/css/owl.theme.default.min.css">
 
     <!-- ------------ AOS Library ------------------------- -->
-    <link rel="stylesheet" href="./css/aos.css">
+    <link rel="stylesheet" href="/Eshaan/p1/css/aos.css">
 
     <!-- Custom Style   -->
-    <link rel="stylesheet" href="./css/Style.css">
+    <link rel="stylesheet" href="/Eshaan/p1/css/Style.css">
+    <style>
+        main .post-content .post-title a {
+        font-size: 3rem;
+        }
+        .t7X54 {
+            font-size: 2rem;
+        }
+    </style>
 
 </head>
 
@@ -75,62 +90,11 @@
 
         <section class="site-title">
             <div class="site-background" data-aos="fade-up" data-aos-delay="100">
-                <h3>Latest News and Updates</h3>
-                <h1>Amazing News and updates are here</h1>
-                <button class="btn">Explore</button>
+                <h1><?php echo $receivedTitle; ?></h1>
             </div>
         </section>
 
         <!------------x----------- Site Title ----------x----------->
-
-        <!-- --------------------- Blog Carousel ----------------- -->
-
-        <section>
-            <div class="blog">
-                <div class="container">
-                    <div class="owl-carousel owl-theme blog-post">
-                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                            <img src="./assets/Blog-post/post-1.png" alt="post-1">
-                            <div class="blog-title">
-                                <h3>NEET UG 2024 SC Hearing Live Updates: Publish NEET results by Saturday noon, mask students'</h3>
-                                <a href="/pages/Blog-post/post1.html"><button class="btn btn-blog">Education News</button></a>
-                                <span>Jul, 18, 2024</span>
-                            </div>
-                        </div>
-                        <div class="blog-content" data-aos="fade-in" data-aos-delay="200">
-                            <img src="./assets/Blog-post/post-2.png" alt="post-1">
-                            <div class="blog-title">
-                                <h3>Is BJP in denial?</h3>
-                                <a href=""><button class="btn btn-blog">Elections</button></a>
-                                <span>Jul 17,2024</span>
-                            </div>
-                        </div>
-                        <div class="blog-content" data-aos="fade-left" data-aos-delay="200">
-                            <img src="./assets/Blog-post/post-3.jpg" alt="post-1">
-                            <div class="blog-title">
-                                <h3>London Fashion week's continued the evolution</h3>
-                                <button class="btn btn-blog">Fashion</button>
-                                <span>2 minutes</span>
-                            </div>
-                        </div>
-                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
-                            <img src="./assets/Blog-post/post-4.png" alt="post-1">
-                            <div class="blog-title">
-                                <h3>London Fashion week's continued the evolution</h3>
-                                <button class="btn btn-blog">Fashion</button>
-                                <span>2 minutes</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="owl-navigation">
-                        <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
-                        <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ----------x---------- Blog Carousel --------x-------- -->
 
         <!-- ---------------------- Site Content -------------------------->
 
@@ -140,98 +104,19 @@
                     <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
                         <div class="post-image">
                             <div>
-                                <img src="./assets/Blog-post/post-1.png" class="img" alt="blog1">
+                                <img src="/Eshaan/p1/assets/Blog-post/<?php echo $receivedImg; ?>" class="img" alt="blog1">
                             </div>
                             <div class="post-info flex-row">
                                 <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Admin</span>
-                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14, 2019</span>
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;<?php echo $receivedDate; ?></span>
                                 <span>2 Commets</span>
                             </div>
                         </div>
                         <div class="post-title">
-                            <a href="#">Why should boys have all the fun? it's the women who are making india an
-                                alcohol-loving contry</a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptas deserunt beatae
-                                adipisci iusto totam placeat corrupti ipsum, tempora magnam incidunt aperiam tenetur a
-                                nobis, voluptate, numquam architecto fugit. Eligendi quidem ipsam ducimus minus magni
-                                illum similique veniam tempore unde?
-                            </p>
-                            <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
+                            <br>
+                            <a href="#"><?php echo $receivedTitle; ?></a>
                         </div>
-                    </div>
-                    <hr>
-                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="post-image">
-                            <div>
-                                <img src="./assets/Blog-post/blog2.png" class="img" alt="blog1">
-                            </div>
-                            <div class="post-info flex-row">
-                                <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Admin</span>
-                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 16, 2019</span>
-                                <span>7 Commets</span>
-                            </div>
-                        </div>
-                        <div class="post-title">
-                            <a href="#">Why should boys have all the fun? it's the women who are making india an
-                                alcohol-loving contry</a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptas deserunt beatae
-                                adipisci iusto totam placeat corrupti ipsum, tempora magnam incidunt aperiam tenetur a
-                                nobis, voluptate, numquam architecto fugit. Eligendi quidem ipsam ducimus minus magni
-                                illum similique veniam tempore unde?
-                            </p>
-                            <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="post-image">
-                            <div>
-                                <img src="./assets/Blog-post/blog3.png" class="img" alt="blog1">
-                            </div>
-                            <div class="post-info flex-row">
-                                <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Admin</span>
-                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 19, 2019</span>
-                                <span>5 Commets</span>
-                            </div>
-                        </div>
-                        <div class="post-title">
-                            <a href="#">New data recording system to better analyse road accidents</a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptas deserunt beatae
-                                adipisci iusto totam placeat corrupti ipsum, tempora magnam incidunt aperiam tenetur a
-                                nobis, voluptate, numquam architecto fugit. Eligendi quidem ipsam ducimus minus magni
-                                illum similique veniam tempore unde?
-                            </p>
-                            <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="post-image">
-                            <div>
-                                <img src="./assets/Blog-post/blog4.png" class="img" alt="blog1">
-                            </div>
-                            <div class="post-info flex-row">
-                                <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;Admin</span>
-                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 21, 2019</span>
-                                <span>12 Commets</span>
-                            </div>
-                        </div>
-                        <div class="post-title">
-                            <a href="#">New data recording system to better analyse road accidents</a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptas deserunt beatae
-                                adipisci iusto totam placeat corrupti ipsum, tempora magnam incidunt aperiam tenetur a
-                                nobis, voluptate, numquam architecto fugit. Eligendi quidem ipsam ducimus minus magni
-                                illum similique veniam tempore unde?
-                            </p>
-                            <button class="btn post-btn">Read More &nbsp; <i class="fas fa-arrow-right"></i></button>
-                        </div>
-                    </div>
-                    <div class="pagination flex-row">
-                        <a href="#"><i class="fas fa-chevron-left"></i></a>
-                        <a href="#" class="pages">1</a>
-                        <a href="#" class="pages">2</a>
-                        <a href="#" class="pages">3</a>
-                        <a href="#"><i class="fas fa-chevron-right"></i></a>
+                        <span class="t7X54 "><?php echo $receivedDescription; ?></span>
                     </div>
                 </div>
                 <aside class="sidebar">
@@ -265,7 +150,7 @@
                         <div class="post-content" data-aos="flip-up" data-aos-delay="200">
                             <div class="post-image">
                                 <div>
-                                    <img src="./assets/popular-post/m-blog-1.jpg" class="img" alt="blog1">
+                                    <img src="/assets/popular-post/m-blog-1.jpg" class="img" alt="blog1">
                                 </div>
                                 <div class="post-info flex-row">
                                     <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
@@ -280,7 +165,7 @@
                         <div class="post-content" data-aos="flip-up" data-aos-delay="300">
                             <div class="post-image">
                                 <div>
-                                    <img src="./assets/popular-post/m-blog-2.jpg" class="img" alt="blog1">
+                                    <img src="/assets/popular-post/m-blog-2.jpg" class="img" alt="blog1">
                                 </div>
                                 <div class="post-info flex-row">
                                     <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
@@ -295,7 +180,7 @@
                         <div class="post-content" data-aos="flip-up" data-aos-delay="400">
                             <div class="post-image">
                                 <div>
-                                    <img src="./assets/popular-post/m-blog-3.jpg" class="img" alt="blog1">
+                                    <img src="/assets/popular-post/m-blog-3.jpg" class="img" alt="blog1">
                                 </div>
                                 <div class="post-info flex-row">
                                     <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
@@ -310,7 +195,7 @@
                         <div class="post-content" data-aos="flip-up" data-aos-delay="500">
                             <div class="post-image">
                                 <div>
-                                    <img src="./assets/popular-post/m-blog-4.jpg" class="img" alt="blog1">
+                                    <img src="/assets/popular-post/m-blog-4.jpg" class="img" alt="blog1">
                                 </div>
                                 <div class="post-info flex-row">
                                     <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
@@ -325,7 +210,7 @@
                         <div class="post-content" data-aos="flip-up" data-aos-delay="600">
                             <div class="post-image">
                                 <div>
-                                    <img src="./assets/popular-post/m-blog-5.jpg" class="img" alt="blog1">
+                                    <img src="/assets/popular-post/m-blog-5.jpg" class="img" alt="blog1">
                                 </div>
                                 <div class="post-info flex-row">
                                     <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
@@ -388,14 +273,14 @@
             <div class="instagram" data-aos="fade-left" data-aos-delay="200">
                 <h2>Instagram</h2>
                 <div class="flex-row">
-                    <img src="./assets/instagram/thumb-card3.png" alt="insta1">
-                    <img src="./assets/instagram/thumb-card4.png" alt="insta2">
-                    <img src="./assets/instagram/thumb-card5.png" alt="insta3">
+                    <img src="/assets/instagram/thumb-card3.png" alt="insta1">
+                    <img src="/assets/instagram/thumb-card4.png" alt="insta2">
+                    <img src="/assets/instagram/thumb-card5.png" alt="insta3">
                 </div>
                 <div class="flex-row">
-                    <img src="./assets/instagram/thumb-card6.png" alt="insta4">
-                    <img src="./assets/instagram/thumb-card7.png" alt="insta5">
-                    <img src="./assets/instagram/thumb-card8.png" alt="insta6">
+                    <img src="/assets/instagram/thumb-card6.png" alt="insta4">
+                    <img src="/assets/instagram/thumb-card7.png" alt="insta5">
+                    <img src="/assets/instagram/thumb-card8.png" alt="insta6">
                 </div>
             </div>
             <div class="follow" data-aos="fade-left" data-aos-delay="200">
@@ -424,16 +309,16 @@
     <!-- -------------x------------- Footer --------------------x------------------- -->
 
     <!-- Jquery Library file -->
-    <script src="./js/Jquery3.4.1.min.js"></script>
+    <script src="/Eshaan/p1/js/Jquery3.4.1.min.js"></script>
 
     <!-- --------- Owl-Carousel js ------------------->
-    <script src="./js/owl.carousel.min.js"></script>
+    <script src="/Eshaan/p1/js/owl.carousel.min.js"></script>
 
     <!-- ------------ AOS js Library  ------------------------- -->
-    <script src="./js/aos.js"></script>
+    <script src="/Eshaan/p1/js/aos.js"></script>
 
     <!-- Custom Javascript file -->
-    <script src="./js/main.js"></script>
+    <script src="/Eshaan/p1/js/main.js"></script>
 </body>
 
 </html>
