@@ -17,6 +17,7 @@ This repository contains the source code for a clone of a News or Blog website. 
 - **HTML5**: For structuring the content.
 - **CSS3**: For styling and layout.
 - **JavaScript**: For adding interactive elements and functionality.
+- **PHP**: For adding Dynamic project view.
 - **[Any frameworks or libraries used, e.g., Bootstrap, jQuery]**
 
 ## Installation
@@ -24,5 +25,10 @@ This repository contains the source code for a clone of a News or Blog website. 
 1. Clone the repository:
    ```bash
    git clone https://github.com/EshaanManchanda/Website-clone-News-or-Blog-.git
+
+## Technology I used
+
+1. Xampp( For PHP )
+2. Vscode( code editor)
 
 Feel free to customize this template to better fit your project and personal preferences.
