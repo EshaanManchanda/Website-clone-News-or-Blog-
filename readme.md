@@ -1,4 +1,17 @@
-# Website Clone (News or Blog)
+# Website (News or Blog)
+
+![Home page](assets/screenshot/full.png)
+
+# News Page
+
+![News page](assets/screenshot/post.png)
+
+# Link Dynamically with:-
+
+![News page](assets/screenshot/short.png)
+
+
+
 
 ## Description
 
